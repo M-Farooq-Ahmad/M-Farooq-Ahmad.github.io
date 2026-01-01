@@ -1,188 +1,234 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ali Shehzad — DevOps Engineer</title>
 
-* {
-  box-sizing: border-box;
-}
+  <!-- External CSS File -->
+  <link rel="stylesheet" href="style.css" />
 
-/* style the container */
-.container {
-  position: relative;
-  border-radius: 5px;
-  background-color: #f2f2f2;
-  padding: 20px 0 30px 0;
-} 
-
-/* style inputs and link buttons */
-input,
-.btn {
-  width: 100%;
-  padding: 12px;
-  border: none;
-  border-radius: 4px;
-  margin: 5px 0;
-  opacity: 0.85;
-  display: inline-block;
-  font-size: 17px;
-  line-height: 20px;
-  text-decoration: none; /* remove underline from anchors */
-}
-
-input:hover,
-.btn:hover {
-  opacity: 1;
-}
-
-/* add appropriate colors to fb, twitter and google buttons */
-.fb {
-  background-color: #3B5998;
-  color: white;
-}
-
-.twitter {
-  background-color: #55ACEE;
-  color: white;
-}
-
-.google {
-  background-color: #dd4b39;
-  color: white;
-}
-
-/* style the submit button */
-input[type=submit] {
-  background-color: #04AA6D;
-  color: white;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-
-/* Two-column layout */
-.col {
-  float: left;
-  width: 50%;
-  margin: auto;
-  padding: 0 50px;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* vertical line */
-.vl {
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  border: 2px solid #ddd;
-  height: 175px;
-}
-
-/* text inside the vertical line */
-.vl-innertext {
-  position: absolute;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #f1f1f1;
-  border: 1px solid #ccc;
-  border-radius: 50%;
-  padding: 8px 10px;
-}
-
-/* hide some text on medium and large screens */
-.hide-md-lg {
-  display: none;
-}
-
-/* bottom container */
-.bottom-container {
-  text-align: center;
-  background-color: #666;
-  border-radius: 0px 0px 4px 4px;
-}
-
-/* Responsive layout - when the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 650px) {
-  .col {
-    width: 100%;
-    margin-top: 0;
-  }
-  /* hide the vertical line */
-  .vl {
-    display: none;
-  }
-  /* show the hidden text on small screens */
-  .hide-md-lg {
-    display: block;
-    text-align: center;
-  }
-}
-</style>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
+  <header id="header">
+    <h1>Ali Shehzad</h1>
+    <p>DevOps Engineer</p>
+  </header>
 
-<h2>Responsive Social Login Form</h2>
-<p>Resize the browser window to see the responsive effect. When the screen is less than 650px wide, make the two columns stack on top of each other instead of next to each other.</p>
+  <nav>
+  <button class="active" onclick="showSection('home', event)">Home</button>
+  <button onclick="showSection('experience', event)">Experience</button>
+  <button onclick="showSection('projects', event)">Projects</button>
+  <button onclick="showSection('skills', event)">Skills</button>
+  <button onclick="showSection('education', event)">Education</button>
+  <button onclick="showSection('certifications', event)">Certifications</button>
+  <button onclick="showSection('resume', event)">Resume</button>
+  <button onclick="showSection('contact', event)">Contact</button>
+</nav>
 
-<div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <h2 style="text-align:center">Login with Social Media or Manually</h2>
-      <div class="vl">
-        <span class="vl-innertext">or</span>
-      </div>
 
-      <div class="col">
-        <a href="#" class="fb btn">
-          <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-         </a>
-        <a href="#" class="twitter btn">
-          <i class="fa fa-twitter fa-fw"></i> Login with Twitter
-        </a>
-        <a href="#" class="google btn"><i class="fa fa-google fa-fw">
-          </i> Login with Google+
-        </a>
-      </div>
-
-      <div class="col">
-        <div class="hide-md-lg">
-          <p>Or sign in manually:</p>
-        </div>
-
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Login">
-      </div>
+  <!-- HOME -->
+  <section id="home" class="active">
+    <h2>About Me</h2>
+    <p>
+     I am a DevOps Engineer with hands-on experience in setting up and automating CI/CD pipelines to help teams 
+      deliver software faster and more reliably. I have worked with AWS to manage cloud infrastructure and used Docker 
+      to containerize applications.I am skilled in Git, Jenkins, Kubernetes, Linux, Ansible, and Terraform, and I use these 
+      tools to automate tasks,  improve workflows, and increase system efficiency.I have completed internships and freelance 
+      projects where I applied my skills to real-world problems, built cloud-based solutions, and improved deployment processes. 
       
-    </div>
-  </form>
-</div>
+      I enjoy learning new DevOps tools, working on challenging projects, and collaborating with teams to deliver high-quality software.
+      My goal is to continue growing as a DevOps professional and contribute to projects that create real impact.
+    </p>
+  </section>
 
-<div class="bottom-container">
-  <div class="row">
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Sign up</a>
+  <!-- EDUCATION -->
+<section id="education">
+  <h2>Education</h2>
+  <p>
+    <strong>BSc Automotive Engineering</strong><br>
+    University of Engineering and Technology (UET), Lahore, Pakistan<br>
+    <em>2022 – 2026 (Final Semester)</em>
+  </p>
+</section>
+
+
+  <!-- EXPERIENCE -->
+<section id="experience">
+  <h2>Experience</h2>
+
+  <p><strong>DevOps Intern – TechnoHacks Solutions Pvt. Ltd (Remote)</strong><br>
+     <em>Dec 2025 – Present</em>
+  </p>
+  <ul>
+    <li>Learning DevOps freelancing practices, including client communication, task planning, and delivery timelines.</li>
+    <li>Working on automation-driven deployments to improve release speed and reduce manual effort.</li>
+    <li>Using AWS and modern DevOps tools to build solutions focused on fast and reliable application delivery.</li>
+  </ul>
+
+  <br>
+
+  <p><strong>DevOps Intern – Rhombix Technology (Remote)</strong><br>
+     <em>October 2025 – Dec 2025</em>
+  </p>
+  <ul>
+    <li>Worked on real-world DevOps projects with weekly tasks and daily learning from mentors.</li>
+    <li>Used Git, GitHub, Docker, Kubernetes, Jenkins, Terraform, and Ansible in multiple projects.</li>
+    <li>Built and deployed applications using automated CI/CD pipelines.</li>
+  </ul>
+
+  <br>
+
+  <p><strong>DevOps Intern – Ewarnet (Remote)</strong><br>
+     <em>Aug 2024 – Jul 2025</em>
+  </p>
+  <ul>
+    <li>Learned DevOps fundamentals using Linux, Git, and GitHub with a focus on version control and workflows.</li>
+    <li>Worked on basic CI/CD tasks using Jenkins for build and deployment automation.</li>
+    <li>Gained foundational hands-on experience with AWS, Docker, Terraform, Ansible, and Kubernetes.</li>
+  </ul>
+</section>
+
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+
+   <h3>Technical Skills</h3>
+<ul>
+  <li><strong>Operating System:</strong> Linux</li>
+  <li><strong>CI/CD Pipelines:</strong> Jenkins, GitHub Actions</li>
+  <li><strong>Version Control:</strong> Git, GitHub</li>
+  <li><strong>Containerization:</strong> Docker</li>
+  <li><strong>Container Orchestration:</strong> Kubernetes</li>
+  <li><strong>Infrastructure as Code (IaC):</strong> Terraform</li>
+  <li><strong>Configuration Management:</strong> Ansible</li>
+  <li><strong>Cloud & Infrastructure:</strong> AWS</li>
+  <li><strong>Scripting:</strong> Python, Bash</li>
+  <li><strong>Monitoring & Observability:</strong> Prometheus, Grafana</li>
+</ul>
+
+
+    <h3>Soft Skills</h3>
+<ul>
+  <li>Quick learner with a strong interest in DevOps tools and processes</li>
+  <li>Ability to identify and resolve basic DevOps and deployment-related issues</li>
+  <li>Works well in a team environment and follows instructions effectively</li>
+  <li>Highly motivated to learn cloud platforms and automation technologies</li>
+</ul>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <ul>
+
+    <li>
+      <strong>Dockerised Multi-Container Round Robin System Using Linux, Docker & Shell Scripting</strong>  
+      <a href="https://drive.google.com/file/d/1viz370aT05exlc70MpZ16Ntt4bJoqd28/view?usp=drive_link" target="_blank">View PDF</a>
+    </li>
+
+    <li>
+      <strong>Botnet Analysis with Intrusion Detection (Snort) on AWS EC2 using Wireshark</strong>  
+      <a href="https://drive.google.com/file/d/1M92m2kiCWBcYvkf7ddVfvBpkKJ5ShcxY/view?usp=drive_link" target="_blank">View PDF</a>
+    </li>
+
+    <li>
+      <strong>Dockerized CI/CD Pipeline with Jenkins, GitHub, and Docker Hub</strong>  
+      <a href="https://drive.google.com/file/d/10qyEIRJm95SSZmKlV-xqHwEppU50Zck4/view?usp=drivesdk" target="_blank">View PDF</a>
+    </li>
+
+    <li>
+      <strong>Infrastructure Automation using Terraform (AWS)</strong>  
+      <a href="https://drive.google.com/file/d/1oW0mbJXk6JfrAWJJR9AOx82JzXtMOIVF/view?usp=drivesdk" target="_blank">View PDF</a>
+    </li>
+
+    <li>
+      <strong>Deployment of a Node.js Application on AWS Using ECR, ECS and Docker</strong>  
+      <a href="https://drive.google.com/file/d/1HLfqWedKvJ5jKx-f2XASbmbI3W69RtyS/view?usp=drivesdk" target="_blank">View PDF</a>
+    </li>
+
+    <li>
+      <strong>Deploying a Flask Application on Kubernetes Using KIND in AWS EC2</strong>  
+      <a href="https://drive.google.com/file/d/1wYneEbAh2WLzMZb6SzW_zJFEu2B1lNA2/view?usp=drive_link" target="_blank">View PDF</a>
+    </li>
+
+    <li>
+      <strong>Portfolio Deployment through GitHub Pages and AWS (S3, IAM)</strong>  
+      <a href="https://drive.google.com/file/d/1pVy9MWgNsGbb3mzvHxvMLpfkHDukwWjy/view?usp=drivesdk" target="_blank">View PDF</a>
+    </li>
+
+    <li>
+      <strong>Static Website Hosting on AWS (S3 & CloudFront)</strong>  
+      <a href="https://drive.google.com/file/d/19ul1drOTj1Pyqdyihp54POjI1uxmf9ZJ/view?usp=drivesdk" target="_blank">View PDF</a>
+    </li>
+
+    <!-- ✅ Last project added -->
+    <li>
+      <strong>Jenkins CI/CD Pipeline & Docker Containerization</strong>  
+      <a href="https://drive.google.com/file/d/1aovmZ759r8omTGePKvHhPapEep5K3u1M/view?usp=drive_link" target="_blank">View PDF</a>
+    </li>
+
+  </ul>
+</section>
+
+
+ <!-- CERTIFICATIONS -->
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <ul>
+      <li>Getting Started DevOps on AWS — <a href="https://drive.google.com/file/d/1_5WupM5yjbezfqQw3GFmTaZyW3buycG3/view">View</a></li>
+      <li>AWS Cloud Practitioner Essentials — <a href="https://drive.google.com/file/d/1hb6932_mlqsy5ntpE55ziJsIDFcehyw2/view">View</a></li>
+      <li>Basics Observability for Amazon EKS — <a href="https://drive.google.com/file/d/1PcRO_mrZIlK6O33BHwmacIh5FVwQFyCu/view">View</a></li>
+      <li>Linux: Introduction to Shell Scripting for DevOps — <a href="https://drive.google.com/file/d/1yi4YtJ0OqkI1859GtTKVxIL2X9akiozk/view">View</a></li>
+      <li>Introduction to Git & GitHub — <a href="https://drive.google.com/file/d/1srIlF4EEbt0xuG5SWHGgkXyKSi2s72uD/view">View</a></li>
+    </ul>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <h2>Resume</h2>
+    <div class="resume">
+      <a href="https://drive.google.com/file/d/1Chc-Kq9HTnqu_hA-ExJCq7_5WnATFd5q/view?usp=drive_link/view" target="_blank">View My Resume</a>
     </div>
-    <div class="col">
-      <a href="#" style="color:white" class="btn">Forgot password?</a>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact">
+      <p>Phone: <a href="tel:+923255723412">+(92) 325 5723412</a></p>
+      <p>Email: <a href="mailto:engralishehzad503@gmail.com">engralishehzad503@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/ali-shehzad-" target="_blank">linkedin.com/in/ali-shehzad-</a></p>
+      <p>GitHub: <a href="https://github.com/alishehzad-943" target="_blank">github.com/alishehzad-943</a></p>
     </div>
-  </div>
-</div>
+  </section>
+
+  <footer id="footer">
+    © 2025 Ali Shehzad | Portfolio
+  </footer>
+
+  <script>
+    function showSection(id, event) {
+      document.querySelectorAll('section').forEach(sec => sec.classList.remove('active'));
+      document.querySelectorAll('nav button').forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(id).classList.add('active');
+      event.target.classList.add('active');
+
+      const header = document.getElementById('header');
+      const footer = document.getElementById('footer');
+
+      if (id === 'home') {
+        header.classList.remove('hidden');
+        footer.classList.remove('hidden');
+      } else {
+        header.classList.add('hidden');
+        footer.classList.add('hidden');
+      }
+    }
+  </script>
 
 </body>
 </html>
-
